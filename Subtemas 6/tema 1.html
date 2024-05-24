@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Poetsen+One&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <title>CMD </title>
+    <link rel="stylesheet" href="../subtemas.css">
+</head>
+<body>
+    <!-- Menú-->
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../tema1.html">Tema 1</a></li>
+            <li><a href="../tema2.html">Tema 2</a></li>
+            <li><a href="../tema3.html">Tema 3</a></li>
+            <li><a href="../tema4.html">Tema 4</a></li>
+            <li><a href="../tema5.html">Tema 5</a></li>
+            <li><a href="../tema6.html">Tema 6</a></li>
+            <li><a href="../tema7.html">Tema 7</a></li>
+            <li><a href="../tema8.html">Tema 8</a></li>
+            <li><a href="../tema9.html">Tema 9</a></li>
+            <li><a href="../tema10.html">Tema 10</a></li>
+            <li><a href="../tema11.html">Tema 11</a></li>
+            <li><a href="../tema12.html">Tema 12</a></li>
+            <li><a href="../tema13.html">Tema 13</a></li>
+            <li><a href="../tema14.html">Tema 14</a></li>
+            <li><a href="../tema15.html">Tema 15</a></li>
+            <li><a href="../Info-Grupo.html">Info Grupo</a></li>
+        </ul>
+    </nav>
+    <!--Contenido-->
+    <h1 id="subtema13-1"> OTROS COMANDOS CMD</h1>
+
+    <hr id="hr13-1">
+
+    <ol class="pasos">
+        
+        CMD de Windows<br>
+        - comandos para crear archivos .txt de preferencia<br>
+        Archivos vacios<br>
+        Type nul > archivoVacio.txt<br>
+        Archivo con contenido<br>
+        copy con archivoConContenido.txt<br>
+        ...iniciar a escrbir<br>
+        Ctrl+Z para guardar<br>
+        Ver Archivos<br>
+        Type archivoConContenido.txt<br>
+        Borrar archivos<br>
+        del archivoConContenido.txt<br>
+        Borrar Carpetas<br>
+        rmdir /s CarpetaCreada<br>
+        - operadoes como *.* y otros<br>
+        *.txt<br>
+        a*.txt<br>
+        - comandos para unir archivos<br>
+        copy /b *.txt union_total.txt<br>
+        copy archivo1.txt + archivo2.txt + archivo3.txt combinado.txt<br>
+        ------------------------------<br>
+        ------------------------------<br>
+        COMANDOS BASICOS EN LINUX PARA LA TERMINAL<br>
+        - Ingresar a la consola como usuario administrador<br>
+        sudo su<br>
+        - Encontrar la ruta<br>
+        pwd<br>
+        - Usuario actual de trabajo<br>
+        whoami<br>
+        - Para Navegar or los archivos y directorios de Linux<br>
+        cd<br>
+        - Para ver el contenido de un directorio<br>
+        ls , ls -l<br>
+        - Para crear un archivo vacÃ-o<br>
+        cat > archivoVacio.txt<br>
+        - Para unir archivos<br>
+        cat archivo1.txt archivos2.txt > fusion.txt<br>
+        - copiar un archivo a un directorio<br>
+        cp arhivo.txt /inicio/destino<br>
+        - copiar un archivo en el mismo directorio<br>
+        cp archivo.txt copiarchivo.txt<br>
+        - copiar el contenenido completo de un Directorio<br>
+        cp -R /inicio/Documentos /inicio/Documentos_Backup<br>
+        - Para renombrar un archivo<br>
+        mv nombre_antiguo.txt nombre_nuevo.txt<br>
+        - mover un archivo a un destino<br>
+        mv archivo.txt /inicio/destino<br>
+        - crear directorios<br>
+        mkdir Musica/canciones<br>
+        - crear con permisos de usario completo<br>
+        mkdir -m777 NombreCarpeta<br>
+        - Borrar un directorio vacio<br>
+        rmdir NombreCarpeta<br>
+        - Borrar un subdirectorio y su carpeta principal<br>
+        rmdir -p mydir/persona1<br>
+        - Borrar un archivo<br>
+        rm arcivo.txt archivo2.txt arhivo4.txt<br>
+        - Crear un archivo vacio<br>
+        touch /inicio/proyecto/pagina.html<br>
+        Nota: El comando touch puede cambiar la lÃ-nea del tiempo<br>
+        - Buscar archivos dentro de un directorio<br>
+        find /inicio -name notas.txt<br>
+        - Bsucar directorios<br>
+        fin ./ -type d -name nombreDelDirectorio<br>
+        - comparar el contenido de dos archivos<br>
+        diff archivo1.txt archivo2.txt<br>
+        - eliminar procesos<br>
+        ps -fu -- para ver procesos<br>
+        kill nombreProceso PID<br>
+        kill -9 SIGKILL 43454<br>
+        - ayuda de linux<br>
+        man<br>
+        man ls<br>
+        - Sincronizar los archivos del paquete desde sus fuentes<br>
+        apt-get update<br>
+        - Instalar la Ãºltima versiÃ³n de todos los paquetes<br>
+        apt-get upgradre<br>
+        - Actualizar la cachÃ© de paquetes y comprobar las dependencias rotas<br>
+        apt-get check<br>
+        - editores de texto<br>
+        nano, vi , jed,<br>
+        - Monitorizar los recursos del sistema<br>
+        htop<br>
+        top<br>
+        - Comandos de estado de los procesos<br>
+        ps -T muestra todos los procesos asociados a l asesion<br>
+        ps -u muestra los procesos asociados al usuario<br>
+        ps -fu muestra los procesos asociados al usuario<br>
+        ps -A muestra todos los procesos en ejecuciÃ³n<br>
+        ps -e muestra todos los procesos en ejecuciÃ³n<br>
+        
+
+
+
+    </ol>
+    <div class="caja">
+        <div class="boton-container">
+            <br><br>
+                <a href="/tema6.html" class="ver-mas">Regresar</a>
+            </div>
+    </div> 
+
+
+</body>
+</html>

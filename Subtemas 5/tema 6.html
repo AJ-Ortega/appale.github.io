@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Poetsen+One&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <title>FLUJO DE DATOS</title>
+    <link rel="stylesheet" href="../subtemas.css">
+</head>
+<body>
+    <!-- Menú-->
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../tema1.html">Tema 1</a></li>
+            <li><a href="../tema2.html">Tema 2</a></li>
+            <li><a href="../tema3.html">Tema 3</a></li>
+            <li><a href="../tema4.html">Tema 4</a></li>
+            <li><a href="../tema5.html">Tema 5</a></li>
+            <li><a href="../tema6.html">Tema 6</a></li>
+            <li><a href="../tema7.html">Tema 7</a></li>
+            <li><a href="../tema8.html">Tema 8</a></li>
+            <li><a href="../tema9.html">Tema 9</a></li>
+            <li><a href="../tema10.html">Tema 10</a></li>
+            <li><a href="../tema11.html">Tema 11</a></li>
+            <li><a href="../tema12.html">Tema 12</a></li>
+            <li><a href="../tema13.html">Tema 13</a></li>
+            <li><a href="../tema14.html">Tema 14</a></li>
+            <li><a href="../tema15.html">Tema 15</a></li>
+            <li><a href="../Info-Grupo.html">Info Grupo</a></li>
+        </ul>
+    </nav>
+    <!--Contenido-->
+    <h1 id="subtema13-1">FLUJO DE DATOS</h1>
+
+    <hr id="hr13-1">
+
+    <ol class="pasos">
+        
+        Todos los procesos (programas en ejecución) tienen asociados tres flujos (streams) de datos principales.
+        Estos son:<br><br>
+        	<b>La entrada estándar.</b> Es donde puede tomar los datos que maneja y que no se indican mediante argumentos u opciones. Por defecto se toma a partir del teclado.<br>
+        	 <b>La salida estándar.</b> Es donde un proceso escribe los resultados de su ejecución. Por defecto es la terminal donde se invocó el programa correspondiente.<br>
+        	<b>La salida de errores.</b> Es donde un proceso escribe los posibles errores durante su ejecución. Por defecto es la terminal donde se invocó el programa correspondiente.
+        <h3>Los flujos de datos se almacenan en descriptores de ficheros que se identifican por un número en la forma siguiente:</h3>
+        <ul>
+        <li>0: representa la entrada estándar.</li>
+        <li> 1:representa la salida estándar.</li>
+        <li> 2: representa la salida de errores.</li></ul>
+        
+        <h3>Redireccionamiento</h3>
+        En bash los flujos de datos se pueden redireccionar libremente hacia distintos ficheros. En esencia este mecanismo consiste en que la salida de un proceso (estándar o de errores) puede escribirse en un fichero en lugar de la terminal asociada, así como la entrada puede tomarse también a partir de un fichero en lugar de utilizar lo escrito mediante el teclado.
+       <br><br>
+        Para indicar un redireccionamiento se utilizan los signos de comparación < y >. De esta forma se generan dos tipos de construcción:
+        <br><br>
+        [x]>salida: indica el redireccionamiento del flujo de datos x al fichero nombrado salida. De no indicarse x se asumirá la salida estándar del programa que se haya invocado, o sea, 1.<br>
+        [x]< entrada: indica el redireccionamiento del contenido del fichero nombrado entrada hacia flujo de datos x. De no indicarse x se asumirá la entrada estándar del comando que se haya invocado, o sea, 0 .<br>
+        <br>
+        
+        
+         <h3>Tuberías Pipes </h3>
+       Son un poderoso mecanismo del shell, permite tomar la salida de un comando y pasársela como entrada a otro.<br>
+Muchos de los comandos mencionados anteriormente, que reciben como argumento un fichero, en caso de omitirse este, utilizan su entrada estándar. Esta entrada puede provenir a su vez de la salida de otros comandos. Lo que permite realizar diversos tipos de filtrado.<br>
+Pueden estar formadas por un número ilimitado de comandos. Estos no se ejecutan secuencialmente, o sea no se espera a que termine uno para ejecutar el siguiente, sino que se va haciendo de forma concurrente. El caracter que se emplea para separar un comando de otro mediante una tubería es |.
+<br>
+<img src="./imagenes/tema 5.10.png" class="imagenes1-1">
+   
+    </ol>
+    <div class="caja">
+        <div class="boton-container">
+            <br><br>
+                <a href="/tema5.html" class="ver-mas">Regresar</a>
+            </div>
+    </div> 
+
+
+</body>
+</html>

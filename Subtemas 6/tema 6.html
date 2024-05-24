@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Poetsen+One&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <title> LINUX</title>
+    <link rel="stylesheet" href="../subtemas.css">
+</head>
+<body>
+    <!-- Menú-->
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../tema1.html">Tema 1</a></li>
+            <li><a href="../tema2.html">Tema 2</a></li>
+            <li><a href="../tema3.html">Tema 3</a></li>
+            <li><a href="../tema4.html">Tema 4</a></li>
+            <li><a href="../tema5.html">Tema 5</a></li>
+            <li><a href="../tema6.html">Tema 6</a></li>
+            <li><a href="../tema7.html">Tema 7</a></li>
+            <li><a href="../tema8.html">Tema 8</a></li>
+            <li><a href="../tema9.html">Tema 9</a></li>
+            <li><a href="../tema10.html">Tema 10</a></li>
+            <li><a href="../tema11.html">Tema 11</a></li>
+            <li><a href="../tema12.html">Tema 12</a></li>
+            <li><a href="../tema13.html">Tema 13</a></li>
+            <li><a href="../tema14.html">Tema 14</a></li>
+            <li><a href="../tema15.html">Tema 15</a></li>
+            <li><a href="../Info-Grupo.html">Info Grupo</a></li>
+        </ul>
+    </nav>
+    <!--Contenido-->
+    <h1 id="subtema13-1">Permisos de usuario en archivos  </h1>
+
+    <hr id="hr13-1">
+
+    <ol class="pasos">
+
+        En Linux, los permisos de archivos y carpetas son un componente importante para gestionar la seguridad y el acceso a la información almacenada en el sistema de archivos de tu equipo. Estos permisos definen quién puede leer, escribir o ejecutar un archivo o directorio y desempeñan un papel fundamental en la protección de la integridad del sistema y la privacidad de los datos.
+
+        <br><br>Debes saber que los permisos se dividen en tres categorías principales y que cada categoría tiene tres tipos de permisos: lectura, escritura y ejecución. Según la categoría, pueden ser:
+        
+        <br><br>-	Propietario: El propietario es el usuario que creó el archivo o directorio. Este tiene el control total sobre los permisos y puede modificarlos según sus necesidades. Los permisos del propietario afectan directamente al usuario que creó el archivo.
+        <br><br>-	Grupo: En Linux, los usuarios se organizan en grupos y un archivo o directorio puede pertenecer a uno de estos grupos. Los permisos asignados al grupo afectan a todos los usuarios que forman parte de ese grupo, permitiéndoles acceder y modificar archivos en conjunto.
+        <br><br>-	Otros: Este conjunto de permisos se aplica a cualquier usuario que no sea el propietario ni esté en el grupo especificado. Los permisos otorgados o denegados a otros usuarios aseguran que el sistema permanezca protegido contra accesos no autorizados.
+        <br><br>La combinación de estas tres categorías y sus respectivos permisos crea un sistema que permite el control sobre quién puede hacer qué con un archivo o directorio. El uso principal de los permisos en Linux es garantizar la seguridad y la privacidad de los datos, al tiempo que permite la colaboración y el acceso necesario para los usuarios autorizados.
+        
+        <h2>Para qué cambiar los permisos </h2>
+
+        <br><br>Los sistemas operativos son multiusuario, podemos acceder de forma simultánea con varios usuarios registrados localmente en nuestro sistema operativo, por tanto, es muy importante realizar una revisión periódica de los permisos existentes. Muchas veces queremos evitar que otros usuarios del equipo modifiquen los archivos, pero no sabemos cómo conseguirlo. En esta ocasión, os vamos a enseñar o cómo asignar permisos a carpetas y archivos en Linux.
+
+        <br><br>Y es que el hecho de controlar el acceso a los datos es uno de los puntos más importantes. De ahí que sea vital establecer diferentes permisos y la propiedad de los archivos o directorios. Siempre con el objetivo de conocer quiénes tienen la opción de acceder a dicha información y así poder proteger los posibles datos sensibles que se tengan.
+        
+        <br><br>Imagina que tienes un servidor Samba o FTP y diferentes grupos de usuarios y también usuarios, si todos los usuarios tuvieran permisos de administrador, podrían leer, escribir y ejecutar cualquier archivo que tengamos en estas carpetas compartidas. Por este motivo es tan importante gestionar adecuadamente los permisos de los usuarios, grupos y otros para los archivos y las carpetas, para que solamente accedan a determinados archivos los usuarios o grupos de usuarios que nosotros queramos, y nadie más, aunque puedan autenticarse en el sistema a través del servicio Samba o FTP.
+        
+        <br><br>Para que todo sea mucho más claro, vamos a dividir este artículo en varios apartados que permitirán entender mejor en todo momento de qué se está hablando. Hay que aclarar que todo lo que explicaremos será a través de la línea de comandos, es decir, tendremos que sacar una consola o bien conectarnos vía SSH a nuestro servidor Linux. Si no estás familiarizado con este componente de Linux tal vez este sea el mejor momento, ya que el nivel de dificultad de lo que vamos a hablar es bajo.
+        
+        <h2>Tipos de permisos</h2>
+
+        <br><br>Puede parecer simple, pero todo puede llegar a tener cierta complejidad a la hora de asignar los permisos en Linux. Todos ellos se pueden aplicar de diferentes formas. Tanto en red, con diferentes usuarios en un servidor, como en loca. Donde varios usuarios pueden manejar un mismo PC, con algunos recursos compartidos entre sí.
+
+        <br><br>-	Lectura (r): Es el primer permiso que podemos encontrarnos. Este nos da la opción de que un usuario pueda ver el contenido al que quiere acceder.
+        <br><br>-	Escritura (w): Nos da la posibilidad de otorgar poder sobre sobre un archivo. De esta forma podrá ser modificado, al igual que un directorio.
+        <br><br>-	Ejecución (x): Permite a los usuarios ejecutar diferentes parámetros dentro del equipo.
+        <br><br>-	Sin permisos (-): Nos indica que el usuario no tiene ningún tipo de permiso sobre el recurso de red o contenido compartido.
+        
+        <h3>Niveles de permisos</h3>
+
+        <br><br>Los diferentes niveles de permisos en Linux, se encargan de definir algunos parámetros en cuanto a las posibilidades de uno o más usuarios sobre un determinado archivo. En este caso, hay uno que es para el propietario, mientras que el otro se usa para los usuarios del mismo grupo que el propietario. Por otro lado, hay un tercer permiso que se usa para los demás usuarios.
+
+        <br><br>Para que te hagas una idea más clara de cuáles son los niveles de permisos que hay, estos se dividen en tres secciones.
+        
+        <br><br>-	Permisos de propietario: Se trata del usuario que crea el archivo desde su equipo. Linux asigna a este usuario el acceso a la información creada, y la posibilidad de realizar cambios sobre el mismo. Este se identifica con el parámetro «u».
+        
+        <br><br>-	Permisos de grupo: Cuando un usuario pertenece a un grupo dentro del directorio de Linux, quiere decir que se le otorgan los mismos permisos que tienen los demás usuarios que pertenecen a ese mismo grupo. El sistema identifica esto con el parámetro «g».
+        
+        <br><br>-	Permisos del resto de usuarios: En este caso nos referimos a los usuarios que no son los creadores del archivo, ni pertenecen al grupo que hemos indicado anteriormente. Los permisos y accesos de estos usuarios los puede establecer el propietario. El sistema los establece con el parámetro «o».
+        
+
+
+
+
+
+    </ol>
+    <div class="caja">
+        <div class="boton-container">
+            <br><br>
+                <a href="/tema6.html" class="ver-mas">Regresar</a>
+            </div>
+    </div> 
+
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Poetsen+One&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <title>"Lista de Listos"</title>
+    <link rel="stylesheet" href="../subtemas.css">
+</head>
+<body>
+    <!-- Menú-->
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../tema1.html">Tema 1</a></li>
+            <li><a href="../tema2.html">Tema 2</a></li>
+            <li><a href="../tema3.html">Tema 3</a></li>
+            <li><a href="../tema4.html">Tema 4</a></li>
+            <li><a href="../tema5.html">Tema 5</a></li>
+            <li><a href="../tema6.html">Tema 6</a></li>
+            <li><a href="../tema7.html">Tema 7</a></li>
+            <li><a href="../tema8.html">Tema 8</a></li>
+            <li><a href="../tema9.html">Tema 9</a></li>
+            <li><a href="../tema10.html">Tema 10</a></li>
+            <li><a href="../tema11.html">Tema 11</a></li>
+            <li><a href="../tema12.html">Tema 12</a></li>
+            <li><a href="../tema13.html">Tema 13</a></li>
+            <li><a href="../tema14.html">Tema 14</a></li>
+            <li><a href="../tema15.html">Tema 15</a></li>
+            <li><a href="../Info-Grupo.html">Info Grupo</a></li>
+        </ul>
+    </nav>
+    <!--Contenido-->
+    <h1 id="subtema13-1">"Lista de Listos"</h1>
+
+    <hr id="hr13-1">
+
+    <ol class="pasos">
+       <p>
+        La “Lista de Listos” se mantiene en orden prioritario y la “Lista de Bloqueados” está desordenada, ya que los procesos se desbloquean en el orden en que tienen lugar los eventos que están esperando.
+Al admitirse un trabajo en el sistema se crea un proceso equivalente y es insertado en la última parte de la “Lista de Listos”.<br>
+La asignación de la CPU al primer proceso de la “Lista de Listos” se denomina “Despacho”, que es ejecutado por una entidad del Sistema Operativo llamada “Despachador”.
+
+<h3>Bloqueados</h3>
+
+        • El “Bloqueo” es la única transición de estado iniciada por el propio proceso del usuario, puesto que las otras transiciones son iniciadas por entidades ajenas al proceso.
+
+        Programa v/s Proceso ://
+        <li>Programa<br>
+        Conjunto de instrucciones, código. Elemento pasivo.</li>
+        <li>
+        Programa en ejecución. (Ente dinámico)<br>
+        Un programa puede levantar varios procesos.
+        Tiene asociado un espacio de direcciones.</li>
+        
+
+       </p> 
+      <img src="./imagenes/tema 5.5.png" class="imagenes1-1">
+
+    <h3>Espacio de Direcciones</h3>
+    <p>
+        El espacio de direcciones es el espacio en memoria asignado al proceso.
+Aquí se encuentra el código del proceso y los datos que este utiliza.
+<br>
+Desde el punto de vista del proceso, el Address Space es la única memoria existente
+en el sistema, no pudiendo acceder a direcciones foráneas.
+<br>
+En el caso de sistemas sin paginación, el espacio de direcciones no puede ser particionado en páginas, y ser cargado por partes o llevado parcialmente a swap; resultando en que el bloque de memoria esta realmente presente ya sea en RAM o disco.
+
+    </p>
+    <img src="./imagenes/tema 5.6.png" class="imagenes1-1">
+<br>
+        <p>
+            Cuando se tiene paginación, entonces el espacio de direcciones es dividido en páginas, y resultando en que no todo este en RAM, sino solo una porción. A este
+concepto de un espacio que realmente no esta por completo ni en memoria, ni en disco; se le denomina Espacio de Direcciones Virtual.
+
+        </p>
+
+        <h3>Process Control Block (BCP O PCB) ://</h3>
+            <p>
+                El Process Control Block, (Bloque del control del Proceso) es una ficha que lleva el sistema operativo con toda la información administrativa de unproceso.<br>
+                Permite conocer con exactitud el estado del
+                proceso, en que parte de su código se está
+                ejecutando, cual es su número identificador,
+                cuanta memoria tiene asociada, cuales
+                archivos están abiertos, etc. 
+                
+            </p>
+
+            <img src="./imagenes/tema 5.7.png" class="imagenes1-1">
+    </ol>
+    <div class="caja">
+        <div class="boton-container">
+            <br><br>
+                <a href="/tema5.html" class="ver-mas">Regresar</a>
+            </div>
+    </div> 
+
+
+</body>
+</html>

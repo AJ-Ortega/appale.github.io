@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Poetsen+One&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <title>Introducción a los Sistemas de Cómputo</title>
+    <link rel="stylesheet" href="../subtemas.css">
+</head>
+<body>
+    <!-- Menú-->
+    <nav>
+        <ul>
+            <li><a href="Proyecto/index.html">Inicio</a></li>
+            <li><a href="/Proyecto/tema1.html">Introducción a los Sistemas de Cómputo</a></li>
+            <li><a href="/Proyecto/tema4.html">Sistema Operativo</a></li>
+            <li><a href="/Proyecto/tema7.html">Base de Datos</a></li>
+            <li><a href="Proyecto/tema8.html">Base de Datos pt.2</a></li>
+            <li><a href="Proyecto/tema13.html">Redes</a></li>
+            <li><a href="Proyecto/tema14-1.html">Desarrollo Web y HTML</a></li>
+            <li><a href="Proyecto/Info-Grupo.html">Info Grupo</a></li>
+        </ul>
+    </nav>
+    <!--Contenido-->
+    <h1 id="subtema13-1">TIPOS DE RELACIONES EN BASE DE DATOS</h1>
+
+    <hr id="hr13-1">
+
+    <h1 class="cuerpo13-1">
+        ¿QUÉ ES UNA BASE DE DATOS RELACIONAL? </h1>
+    <h1 class="cuerpo13-1">
+        Un aspecto importante de las relaciones entre las tablas es
+        la cardinalidad. La Cardinalidad se refiere a la cantidad de
+        asociaciones que pueden existir entre dos tipos de registros
+        de datos.        
+        </h1>
+    <h1 class="cuerpo13-1">
+        Dependiendo del tipo de cardinalidad que tenga la
+        relación esta puede denominarse de las siguientes maneras:
+        </h1>
+    <h1 class="cuerpo13-1">1. Relación de uno a uno: Un registro de una Entidad A se relaciona únicamente con
+        un registro de una tabla B y viceversa. Este tipo de relación
+        no es común en el mundo de las bases de datos.</h1>
+    <h1 class="cuerpo13-1">EJEMPLO: Supongamos que tenemos una tabla llamada vehículo
+        y otra llamada Matriculas, la relación que se haría
+        entre ambas tablas sería la siguiente: un vehículo solo
+        puede estar asociado a una sola matricula y viceversa.</h1>
+        <div align="center">
+            <img src="./imgs 9/Captura de pantalla 2024-05-22 184025.png" class="imagenes1-1" height="60px">
+        </div>
+            <h1 class="cuerpo13-1">2. Relación de uno a muchos: Un registro de una Entidad A se relaciona con varios
+                registros de una tabla B. 
+                </h1>
+        <h1 class="cuerpo13-1">EJEMPLO: Un Departamento tiene varios municipios, y un
+            municipio solo pertenece a un departamento
+            </h1>
+            <div align="center">
+                <img src="./imgs 9/U A M.png" class="imagenes1-1" height="60px">
+            </div>
+        <h1 class="cuerpo13-1">3. Relación de muchos a muchos: Cuando un registro de una entidad A puede estar 
+            relacionado con más de un registro de la entidad B y viceversa. En este caso las dos tablas no pueden estar relacionadas
+             directamente, se tiene que añadir una tabla entre las dos que incluya los pares de valores relacionados entre sí. 
+        </h1>
+            <h1 class="cuerpo13-1">EJEMPLO: Un estudiantes puede asignarse varios cursos, pero un
+                curso también puede tener varios estudiantes
+                asignados.</h1>
+            <div align="center">
+                <img src="./imgs 9/MAM1.png" class="imagenes1-1" height="60px">
+            </div>
+            <h1 class="cuerpo13-1">Sin embargo, esto no puede ser reflejado de esta forma
+                si no que es necesario añadir una nueva tabla para
+                poder registrar la información en una Base de Datos</h1>
+                <div align="center">
+                    <img src="./imgs 9/MAM2.png" class="imagenes1-1" height="110px">
+                </div>
+    <div class="caja">
+        <!-- Ver mas Subtemas -->
+        <div class="boton-container">
+            <br>
+            <a href="../tema7.html" class="ver-mas">Regresar</a>
+        </div>
+    </div> 
+</html>

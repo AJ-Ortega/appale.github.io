@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    font-family: "Oswald", sans-serif;
+    font-size: medium;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block; 
+    margin-right: 0;
+    border-right: 3px solid #555; 
+    padding: 0 10px; 
+    line-height: 40px; 
+    box-sizing:border-box;
+}
+
+nav ul li:last-child {
+    border-right: none; 
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+#subtema13-1{
+    color: black;
+    text-align: center;
+    font-family: "Poetsen One", sans-serif;
+    font-size: 50px;
+}
+
+#hr13-1{
+    border-bottom: 1px dotted black; 
+}
+
+.cuerpo13-1{
+    margin: 2%;
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+}
+
+.pasos {
+    list-style-type: decimal;
+    margin: 4%;
+}
+
+.pasos li {
+    margin-bottom: 20px; 
+    font-size: 20px ;
+}
+
+.pasos img {
+    display: block; 
+    margin: 0 auto; 
+    box-shadow: 9px 9px 8px rgba(0, 0, 0, 0.521);
+    width: auto;
+    height: auto;
+}
+
+.tipos {
+    list-style-type: decimal;
+    margin: 4%;
+}
+
+.tipos li {
+    margin-bottom: 20px; 
+    font-size: 20px ;
+    font-family: "Quicksand", sans-serif;
+}
+
+.tipos img {
+    display: block; 
+    margin: 0% que; 
+    box-shadow: 9px 9px 8px rgba(0, 0, 0, 0.521);
+    width: 30%; 
+    height: 50%;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+.imagenes {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+    gap: 10px; 
+    
+}
+
+.tipos h4 {
+    font-size: 19px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: normal;
+}
+
+.contenido{
+    margin: 2%;
+    font-size: 19px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: normal;
+}
+
+#subtema4{
+    margin: 2%;
+    font-size: 19px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: normal;
+}
+
+.grupo-trabajo img {
+    display: block; 
+    margin: 0% ; 
+    box-shadow: 9px 9px 8px rgba(0, 0, 0, 0.521);
+    width: 70%; 
+    height: 2%;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+    gap: 10px; 
+}

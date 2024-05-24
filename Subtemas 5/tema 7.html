@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Poetsen+One&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <title>Entorno de trabajo en bash</title>
+    <link rel="stylesheet" href="../subtemas.css">
+</head>
+<body>
+    <!-- Menú-->
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../tema1.html">Tema 1</a></li>
+            <li><a href="../tema2.html">Tema 2</a></li>
+            <li><a href="../tema3.html">Tema 3</a></li>
+            <li><a href="../tema4.html">Tema 4</a></li>
+            <li><a href="../tema5.html">Tema 5</a></li>
+            <li><a href="../tema6.html">Tema 6</a></li>
+            <li><a href="../tema7.html">Tema 7</a></li>
+            <li><a href="../tema8.html">Tema 8</a></li>
+            <li><a href="../tema9.html">Tema 9</a></li>
+            <li><a href="../tema10.html">Tema 10</a></li>
+            <li><a href="../tema11.html">Tema 11</a></li>
+            <li><a href="../tema12.html">Tema 12</a></li>
+            <li><a href="../tema13.html">Tema 13</a></li>
+            <li><a href="../tema14.html">Tema 14</a></li>
+            <li><a href="../tema15.html">Tema 15</a></li>
+            <li><a href="../Info-Grupo.html">Info Grupo</a></li>
+        </ul>
+    </nav>
+    <!--Contenido-->
+    <h1 id="subtema13-1">Entorno de trabajo en bash</h1>
+
+    <hr id="hr13-1">
+
+    <ol class="pasos">
+        <p>
+        Un entorno de trabajo en Linux no es más que la configuración que posee un usuario durante su interacción con el sistema y más específicamente con el shell. Las características del 
+        entorno para el caso de bash pueden ser la forma en que se muestra el prompt, los alias y funciones definidos y las variables del entorno de forma general, ya que estas definen el 
+        comportamiento de muchos programas y comandos. Las facilidades para cambiar el entorno de trabajo
+        dependen de las capacidades del shell que se utilice.
+        <h3>Variables del entorno</h3>
+     
+        
+        -	Almacenan valores que describen las propiedades del entorno de trabajo. Un usuario puede definir sus propias variables o modificar las ya existentes.<br>
+        -	 Para asignarle valor a una variable en el shell se emplea el operador = entre el nombre de la variable y el valor asignado (no deben haber espacios intermedios).<br>
+        Ejemplo: $ MENSAJE="Hola amigo"<br>
+        -	Para acceder al valor de una variable se emplea el caracter $ seguido por el nombre de la variable. Para imprimir en la terminal el valor de una variable se puede utilizar 
+        el comando echo.<br>
+        -	Ejemplo: $ echo $MENSAJE Hola amigo<br><br>
+        
+        
+        
+        
+        
+        Dentro de un shell se pueden ejecutar otros shells que serían hijos del primero (subshells) heredando
+        todo o parte del entorno de trabajo del padre. Para que una variable mantenga su valor en los shells hijos es necesario indicarlo explícitamente mediante el comando export. Ejemplo:<br>
+        -	$ export MENSAJE<br><br>
+        -	Tanto la asignación del valor como el exportar una variable se pueden hacer a la vez:<br>
+        -	$ export MENSAJE="Hola amigo"<br><br>
+        
+        Para ver las variables del entorno definidas se puede emplear el comando set. Este además se relaciona con las opciones que es otra forma de regir el comportamiento del shell. Las 
+        opciones se activan (on) o desactivan (off). Estas se utilizan para indicar propiedades del shell muy específicas por lo que no nos vamos a detener en ellas. Si se desea conocer más 
+        al respecto se puede hacer $ help set | less.<br>
+        -	Para eliminar el valor de una variable se emplea el comando unset. Ejemplo:
+        $ unset MENSAJE
+        
+
+        <h3> Variables del entorno bash</h3>
+       
+        
+        <b>PATH:</b> guarda la secuencia de caminos donde el Shell busca los programas que se intenten ejecutar en la línea de comandos cuando no se utilizan los caminos absolutos. Estos caminos se 
+        separan por el carácter “:”
+        Ejemplo:<br>
+        -	$ echo $PATH /bin:/usr/bin:/usr/X11R6/bin:/usr/local/bin
+        Para añadir un nuevo camino puede hacerse:<br>
+        -	$ export PATH=$PATH: /bin<br><br>
+        
+        <b>USER:</b> contiene el login del usuario actual.<br>
+        PAGER: almacena el paginador utilizado por defecto por algunos programas. Por ejemplo, el comando man utiliza esta
+        variable para determinar que paginador empleará, aunque primero chequea otra variable llamada MANPAGER y si esta no tiene valor entonces acude a PAGER, que de no tener valor tampoco, 
+        asumirá al less como paginador por defecto. También asociada a man existe la variable MANPATH donde se especifican los caminos de los manuales que despliega man, y LANG para indicar el
+        idioma.<br>
+        Ejemplo:<br>
+        -	$ export PAGER=more $ man bash<br><br>
+        
+        <b>HOME:</b> guarda el directorio base del usuario actual.<br>
+        Ejemplo:<br>
+        $ echo $HOME /home/pepe <br><br>
+        
+        <b>EDITOR:</b> contiene el editor por defecto del usuario actual. De no tener valor asociado se utiliza vi. En entornos gráficos se pueden indicar editores visuales aunque para ello 
+        se prefiere emplear la variable VISUAL. Más adelante veremos un ejemplo del uso de
+        EDITOR.<br><br>
+        
+        <b>PS1:</b> almacena la estructura del prompt principal del usuario.<br>
+        Permite una serie de macros.<br>
+        Ejemplos:<br>
+        \d : contiene la fecha del sistema.<br>
+        \h : contiene el nombre de la máquina.<br>
+        \T : contiene la hora del sistema.<br>
+        \u : contiene el login del usuario.<br>
+        \w : contiene el nombre completo del directorio de trabajo actual.<br>
+        \W : contiene la base del nombre del directorio actual (Ejemplo: para
+        /home/pepe/doc la base es doc).<br>
+         \$ : si el ID del usuario es 0 (root) contiene el valor # y sino, $.<br>
+         \# : contiene el número del comando actual desde la creación del shell.<br>
+         El prompt principal por defecto tiene la forma: "[\u@\h \W]\$ "<br>
+         Ejemplo:
+         $ export PS1="[\T,\u\#]\$ " [14:12:15,pepe 315]$<br><Br>
+            
+        <b>PS2:</b> guarda el prompt secundario. Este es el que se presenta cuando el shell no puede interpretar lo que se ha escrito hasta el momento. Normalmente el Shell interpreta lo tecleado cuando se pulsa retorno. En caso de que no se halla completado una estructura interpretable bash muestra el prompt secundario, que por defecto es "> ". Para forzar a que bash no interprete algo después del retorno se escribe el caracter ``\'' antes del retorno.
+        <br>
+        En este ejemplo se muestra como se emplean las estructuras de control de bash, particularmente para un lazo tipo for. Como ya se ha mencionado existen otras estructuras de las cuales se podrá encontrar información en el manual de bash. Esta secuencia de código permite buscar recursivamente en el directorio /tmp todos los ficheros regulares cuyo tamaño exceda 1M y para cada uno de ellos se ejecutan los comandos stat y rm en forma interactiva. También se imprimen líneas divisorias.
+        <br><br>
+        <b>HISTFILE:</b> almacena el nombre absoluto del fichero que contiene el historial de comandos para cada usuario. También existen HISTFILESIZE, HISTCMD e HISTSIZE. Esta última indica el tamaño del historial de comandos, que por defecto es de 1000 comandos.
+        <br>-	Ejemplo:<br>
+        -	$ echo $HISTFILE /home/pepe/.bash_history<br>
+        <br>
+        <b>PWD:</b> contiene el directorio de trabajo actual. Esta variable la pueden emplear algunos programas para saber desde donde se invocaron.<br>
+        <br><b>SECONDS:</b> almacena la cantidad de segundos transcurridos desde la invocación del shell actual.
+        
+        <h3>Ficheros y perfiles</h3>
+        <br><br>Para cada usuario existen tres ficheros muy importantes que permiten definir en gran medida las características del shell durante la interacción con este. Estos constituyen shells scripts y se conocen como ficheros perfiles o profiles:
+        <br><br>a)	bash_profile: se ejecuta siempre que se abra una nueva sesión en el sistema. Cada vez que un usuario se conecte al sistema se ejecutará el script .bash_profile, en el caso de que se utilice a bash como shell. Para ser compatible con sus versiones anteriores, bash en caso de que no existiera .bash_profile, ejecuta .bash_login, o sino, .profile. En este fichero se pueden colocar las asignaciones a las variables del entorno siendo debidamente exportadas a través de export. También se puede establecer la máscara de permisos usando umask. Existe además un profile general ubicado en /etc/profile que se ejecuta también siempre que un usuario inicia una sesión en el sistema antes de su profile particular.
+        <br><br>b)	 .bash_logout: se ejecuta al terminar una sesión de trabajo. Puede contener comandos para salvar lo hecho durante la sesión.
+        <br><br>c)	 .bashrc: se ejecuta siempre que se invoque un nuevo shell. Por lo general en él se colocan las definiciones de funciones y los alias de comandos. El fichero .bashrc que posee cada usuario por defecto ejecuta primero a /etc/bashrc.
+        <br><br>Cuando se crea un nuevo usuario se le colocan en su directorio base estos tres ficheros cuyos patrones están el directorio /etc/skel.
+        
+        
+        <h3>Ejecución en bash</h3>
+        
+        <br><br>Existen dos formas de ejecutar un shell script en el bash:
+        <br><br>Invocándolo directamente por su nombre. Para esto el camino al fichero que lo representa debe encontrarse en la variable PATH del entorno, sino será necesario especificar el camino completo del fichero o relativo al directorio actual. El fichero debe además, poseer los permisos de ejecución adecuados. Lo que ocurrirá en este caso es que se creará un
+        <br><br>shell hijo que será el que realmente ejecute (interprete) al script.
+            <br><br>-	Utilizando el comando source. De esta forma se ejecutará el script en el shell actual. En este caso no será necesario que el fichero correpondiente posea permisos de ejecución. El comando se puede sustituir por el caracter punto. Por ejemplo, si se modificara el .bash_profile no será necesario, para activar los cambios, desconectarse y conectarse nuevamente al sistema, simplemente se puede hacer:
+
+            <br><br>-	$ source .bash_profile ó $ . .bash_profile
+
+            <br><br>-	Un ejercicio interesante puede ser hacer un Shell script (editar un fichero) llamado program.sh con la siguiente línea:
+         <br><br>echo $SECONDS
+        <br><br>Ejecutar luego: $ . program.sh 
+        <br><br>Por último asignarle al fichero permisos de ejecución para ejecutarlo de la forma tradicional:
+        <br><br>$ chmod +x program.sh 
+        <br><br>$ ./program.sh
+
+        
+
+
+
+
+
+    </p>
+   
+    </ol>
+    <div class="caja">
+        <div class="boton-container">
+            <br><br>
+                <a href="/tema5.html" class="ver-mas">Regresar</a>
+            </div>
+    </div> 
+
+
+</body>
+</html>

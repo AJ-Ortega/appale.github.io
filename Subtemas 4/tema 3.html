@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Poetsen+One&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <title>Introducción a los Sistemas de Cómputo</title>
+    <link rel="stylesheet" href="../subtemas.css">
+</head>
+<body>
+    <!-- Menú-->
+    <nav>
+        <ul>
+            <li><a href="Proyecto/index.html">Inicio</a></li>
+            <li><a href="/Proyecto/tema1.html">Introducción a los Sistemas de Cómputo</a></li>
+            <li><a href="/Proyecto/tema4.html">Sistema Operativo</a></li>
+            <li><a href="/Proyecto/tema7.html">Base de Datos</a></li>
+            <li><a href="Proyecto/tema8.html">Base de Datos pt.2</a></li>
+            <li><a href="Proyecto/tema13.html">Redes</a></li>
+            <li><a href="Proyecto/tema14-1.html">Desarrollo Web y HTML</a></li>
+            <li><a href="Proyecto/Info-Grupo.html">Info Grupo</a></li>
+        </ul>
+    </nav>
+    <!--Contenido-->
+    <h1 id="subtema13-1">Multiprogramacion</h1>
+
+    <hr id="hr13-1">
+
+    <ol class="pasos">
+        <ul>
+            <li>Objetivo: Aprovechar los tiempos de espera de un trabajo en la CPU para ejecutar instrucciones de otro trabajo</li>
+            <li>
+                Método:<br>
+-	Mantener los trabajos simultáneamente en memoria<br>
+-	Elegir el trabajo a conmutar<br>
+-	Necesidad de usar interrupciones o DMA
+            </li>
+        </ul>
+
+        <h3>Se optimiza la productividad (throughput) del sistema</h3>
+        <ul>
+            <li>
+                Elementos necesarios:<br>
+                -	Las rutinas de E/S deben estar suministradas por el SSOO<br>
+                -	Debe existir una gestión de memoria para poder asignar y controlar la memoria repartida entre varios trabajos<br>
+                -	Debe existir una planificación de la CPU. El SSOO debe elegir uno de entre los diferentes trabajos listos para ejecutarse que hay en memoria<br>
+                -	La asignación de los dispositivos es realizada por el SSOO<br>
+                   
+            </li>
+        </ul>
+
+        <h3>Tiempo compartido</h3>
+        <ul>
+            <li>Objetivo: Permitir la interacción entre el usuario y el trabajo que se está ejecutando.</li>
+            <li>
+                Método:<br>
+-	 Utilizar las técnicas de multiprogramación y planificación de la CPU para proporcionar a cada usuario una pequeña proporción del tiempo de CPU.
+
+            </li>
+            <li>
+                Características:<br>
+-	 Cada usuario tiene la impresión de disponer de la máquina completa.<br>
+-	 Se intenta optimizar el tiempo de respuesta.<br>
+-	 Basados en la asignación de fracciones de tiempo (se divide el tiempo de CPU de forma equitativa entre los procesos).<br>
+
+            </li>
+        </ul>
+<h3>sistemas de tiempo real</h3>
+        <ul>
+            <li>El factor tiempo se convierte en una variable fundamental.</li>
+            <li>Muy utilizados en sistemas empotrados.</li>
+            <li>El sistema operativo debe responder siempre dentro de los márgenes requeridos por el sistema controlado, si nos salimos de esos márgenes, tendremos que buscar otras soluciones.</li>
+            <li>Existen actualmente lenguajes de programación (Ada) que nos dan grandes posibilidades para controlar procesos en tiempo real.</li>
+        </ul>
+    </ol>
+    <div class="caja">
+        <div class="boton-container">
+            <br><br>
+                <a href="/tema4.html" class="ver-mas">Regresar</a>
+            </div>
+    </div> 
+
+
+</body>
+</html>

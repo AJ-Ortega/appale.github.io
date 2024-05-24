@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Poetsen+One&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <title> Virtual Box</title>
+    <link rel="stylesheet" href="../subtemas.css">
+</head>
+<body>
+    <!-- Menú-->
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../tema1.html">Tema 1</a></li>
+            <li><a href="../tema2.html">Tema 2</a></li>
+            <li><a href="../tema3.html">Tema 3</a></li>
+            <li><a href="../tema4.html">Tema 4</a></li>
+            <li><a href="../tema5.html">Tema 5</a></li>
+            <li><a href="../tema6.html">Tema 6</a></li>
+            <li><a href="../tema7.html">Tema 7</a></li>
+            <li><a href="../tema8.html">Tema 8</a></li>
+            <li><a href="../tema9.html">Tema 9</a></li>
+            <li><a href="../tema10.html">Tema 10</a></li>
+            <li><a href="../tema11.html">Tema 11</a></li>
+            <li><a href="../tema12.html">Tema 12</a></li>
+            <li><a href="../tema13.html">Tema 13</a></li>
+            <li><a href="../tema14.html">Tema 14</a></li>
+            <li><a href="../tema15.html">Tema 15</a></li>
+            <li><a href="../Info-Grupo.html">Info Grupo</a></li>
+        </ul>
+    </nav>
+    <!--Contenido-->
+    <h1 id="subtema13-1"> Virtual Box</h1>
+    <hr id="hr13-1">
+
+    <ol class="pasos">
+        <h2>Definicion</h2>
+        VirtualBox (VB) es un software de virtualización de tipo 2 donde los usuarios pueden cargar múltiples SSOO invitados en un solo SO anfitrión. Cada invitado se puede configurar, iniciar, pausar o parar de forma independiente. El SO anfitrión y los SSOO invitados pueden comunicarse entre sí a través de una serie de mecanismos, entre ellos un portapapeles común, carpetas compartidas, arrastrando y soltando ficheros, etc.
+
+        <h2>Caracteristicas</h2>
+        VirtualBox fue inicialmente creado por la empresa Innotek bajo licencia propietaria. También hicieron una versión gratuita para uso personal o de evaluación con menos funcionalidades, la cual se encontraba regida por la licencia PUEL. En enero de 2007, la versión gratuita fue promocionada a libre, se la denominó VirtualBox OSE asignándosele la licencia libre GPLv2 y la versión completa de VirtualBox se ofreció gratuitamente bajo licencia PUEL. En febrero de 2008 la empresa Innotek fue comprada por Sun Microsystems y esta, a su vez, en enero de 2010 fue adquirida por Oracle, que cambió el nombre de VirtualBox a Oracle VM VirtualBox y también modificó la forma de distribuirlo, pues crearon una versión de VirtualBox bajo licencia libre GPLv2 a la que le faltaban algunos componentes propietarios (USB 2.0, VRDP, PXE y PCI passthrough) que se podían añadir mediante la instalación del paquete denominado Oracle VM VirtualBox Extension Pack bajo licencia PUEL. Este formato es el actual hoy en día, por lo que si queremos instalar un VirtualBox completo hay que instalar el paquete principal y a continuación el Extension Pack.
+<br><br>
+        <ul>
+            <li><b>Multiplataforma: </b><br>
+                Puede ser instalado en diversos SSOO de 32 y 64 bits, como Windows, GNU/Linux, Mac OS X y Solaris.
+            </li><br>
+            <li><b>Multihuéspedes: </b><br>
+                Puede virtualizar múltiples SSOO de 32 y 64 bits, como Windows 8, Windows 7, Windows XP, ..., Debian, Ubuntu, OpenSuSe, ..., OS/2, Mac OS X, DOS, Solaris, etc.
+            </li><br>
+            <li>
+                Es software libre, usa la licencia GPLv2, aunque algunos componentes son gratuitos con licencia PUEL.
+            </li><br>
+            <li><b>Portabilidad:</b><br>
+                VB funcionalmente es muy parecido en todas las plataformas donde se puede ejecutar, por este motivo 
+                se pueden portar MMVV entre ellas, es decir, se puede crear una MV en Windows y luego ejecutarla en
+                 GNU/Linux. Además, las MMVV pueden ser fácilmente importadas y exportadas utilizando el Open Virtualization
+                 Format (OVF), un estándar creado para este fin. Se puede incluso importar en este formato MMVV que fueron 
+                 creadas con un software de virtualización diferente.
+
+            </li><br>
+            <li><b>No siempre es necesaria la virtualización asistida por hardware: </b><br>
+            <br>En muchos escenarios, VB no precisa de la virtualización asistida por hardware, que requiere de las funciones 
+            añadidas al hardware moderno, denomidas Intel VT-x para los microprocesadores de Intel y AMD-V para los micros 
+            de AMD. Este hecho, permite que VB pueda utilizarse incluso en hardware antiguo, donde estas características no 
+            están presentes. A veces, las MMVV intentan hacer operaciones que pueden interferir en el buen funcionamiento de
+             la máquina anfitriona, y evitar esto es una de las funciones principales de los hipervisores. VB como tal, en la
+              mayoría de los casos solo precisa de virtualización basada en software, pero en ocasiones, como por ejemplo en la
+               virtualización de SSOO de 64 bits sobre plataformas hardware x86 (no fueron diseñadas pensando en la 
+               virtualización), para ejecutar las operaciones que pueden afectar al anfitrión, necesita la ayuda de Intel 
+               VT-x o AMD-V. No se debe olvidar que además de seleccionar estas características en la configuración de la MV,
+                es probable que para que se puedan utilizar, también deban ser activadas en la BIOS de la máquina anfitriona. 
+                (Advertencia: Se permite instalar en la misma máquina anfitriona más de un software de virtualización, pero no
+                 es recomendable ejecutar más de uno a la vez, sobre todo cuando se utiliza virtualización asistida por 
+                 hardware, ya que los hipervisores no pueden seguir lo que otros hipervisores están tratando de hacer sobre 
+                 el anfitrión, consiguiéndose, muy posiblemente, el bloqueo del ordenador).
+            </li><br>
+
+            <li><b>Guest additions: </b><br>
+                Son paquetes de software que se pueden instalar en el interior de los sistemas invitados compatibles para mejorar su rendimiento y proporcionar una mejor comunicación con el sistema anfitrión. Después de instalar las Guest Additions en una MV, esta mejorará en los siguientes aspectos:
+
+                <br><br>-	Integración del puntero del ratón, evitando que se tenga que hacer click sobre la ventana de la MV para que el ratón se le asigne a esta. Simplemente con poner el ratón sobre la ventana de la MV ya lo tendrá.
+                <br><br>-	Carpetas compartidas entre el anfitrión y el invitado para intercambiar ficheros.
+                <br><br>-	Mejora de las características gráficas de la MV, permitiendo el redimensionado automático de la interfaz gráfica del SO invitado cuando se modifica el tamaño de la ventana de la MV.
+                <br><br>-	Modo fluido de las ventanas. Con este modo, las ventanas individuales abiertas sobre el escritorio del invitado se integran con las ventanas abiertas del anfitrión, dando la sensación de que las aplicaciones del invitado se están ejecutando en el anfitrión.
+                <br><br>-	Sincronización de forma automática de la hora de la MV con el equipo anfitrión.
+                <br><br>-	Compartir el portapapeles entre el anfitrión y el invitado.
+
+
+
+            </li><br>
+            <li><b>Instantáneas (snapshots): </b><br>
+                Se pueden guardar instantáneas arbitrarias del estado actual de la MV, permitiendo volver atrás en el tiempo, restaurando la MV al estado congelado por la instantánea y comenzando así una configuración alternativa de la MV a partir de ahí.
+            </li><br>
+            <li><b>Grupos de MMVV: </b><br>
+                VB permite al usuario organizar las MMVV colectivamente, así como individualmente. En general, las operaciones que se pueden realizar con los grupos son las mismas que con las MMVV independientemente, es decir: iniciar, pausar, reiniciar, parar, etc. También es posible crear dentro de un grupo otros grupos.
+            </li><br>
+            <li>
+                Permite montar imágenes ISO sobre las unidades de CD o DVD evitando el uso de los CDs y DVDs físicos.
+            </li>
+        </ul>
+
+    </ol>
+    <div class="caja">
+        <div class="boton-container">
+            <br><br>
+                <a href="/tema6.html" class="ver-mas">Regresar</a>
+            </div>
+    </div> 
+
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Poetsen+One&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <title>Introducción a los Sistemas de Cómputo</title>
+    <link rel="stylesheet" href="../subtemas.css">
+</head>
+<body>
+    <!-- Menú-->
+    <nav>
+        <ul>
+            <li><a href="/Proyecto/index.html">Inicio</a></li>
+            <li><a href="/Proyecto/tema1.html">Introducción a los Sistemas de Cómputo</a></li>
+            <li><a href="/Proyecto/tema4.html">Sistema Operativo</a></li>
+            <li><a href="/Proyecto/tema7.html">Base de Datos</a></li>
+            <li><a href="/Proyecto/tema8.html">Base de Datos pt.2</a></li>
+            <li><a href="/Proyecto/tema13.html">Redes</a></li>
+            <li><a href="/Proyecto/tema14-1.html">Desarrollo Web y HTML</a></li>
+            <li><a href="/Proyecto/Info-Grupo.html">Info Grupo</a></li>
+        </ul>
+    </nav>
+    <!--Contenido-->
+    <h1 id="subtema13-1">Comandos básicos de redes en CMD</h1>
+    <hr id="hr13-1">
+
+    <h1 class="contenido">
+        Una de las formas más rápidas de comprobar la conectividad de la red o diagnosticar cualquier tipo de error en la configuración o asignación de IPs, es hacerlo a través del
+        popular cmd en Windows (línea de comandos). Aunque sería mucho más sencillo hacerlo a través de una interfaz gráfica de usuario, vais a comprobar cómo, una vez que hayas
+        aprendido estos comandos, será mucho más rápido hacer la tarea en cuestión de minutos.
+    </h1>
+    <h1 class="contenido">
+        Antes de conocer los pines hablemos un poco de CMD:<br><br>
+        CMD es una interfaz de línea de comandos que se utiliza en los sistemas operativos de Microsoft. Esta herramienta, simula comandos al estilo MS-DOS, el cual es el sistema operativo basado en texto que teníamos previamente a las interfaces gráficas. Esto
+        permite a los usuarios teclear comandos, en lugar de tener que utilizar la propia interfaz gráfica. De este modo, se puede interactuar con el sistema de una forma muy completa y eficiente. Los comandos permiten que los usuarios puedan navegar por el sistema de
+        archivos del ordenador, abrirlos junto a los programas, manipularlos, y hasta ejecutar algunas tareas de administración de sistemas.
+    </h1>
+
+    <ol class="pasos">
+        <li>ping.</li>
+        <h1 class="contenido">
+            Es uno de los comandos más básicos. Sin embargo, es uno de los más útiles si queremos tener mayor control de lo que ocurre con nuestra conectividad de red.
+            ¿Qué información puedes saber? Si tu ordenador logra alcanzar o no un destino con determinada dirección IP, cuánto tiempo tarda (en milisegundos) en viajar un paquete de datos tanto a la ida como a la vuelta.
+        </h1>
+        
+        <br>
+
+        <li>ipconfig.</li>
+        <h1 class="contenido">
+            Muy probablemente, ya habrás utilizado este comando para tener información respecto a los datos de IP de tus distintas interfaces de red. Sin embargo, no sólo puedes consultar datos sino realizar ciertas acciones.
+            Un dato interesante es que esto último puede servir de ayuda cuando estamos intentando resolver un problema de conectividad a Internet o a un sitio web en
+            particular. Si tienes problemas con la resolución de direcciones, este comando te permitirá borrar el caché almacenado en el sistema operativo donde lo
+            ejecutemos. Después de la ejecución del comando, el servidor DNS debería ser capaz de resolver los dominios a los cuales logramos acceder, es decir, deberíamos tener acceso normalizado a Internet.
+        </h1>
+        
+        <br>
+
+        <li>nslookup.</li>
+        <h1 class="contenido">
+            ¡Un comando apto para curiosos! Mediante este comando, es posible saber a qué dirección de IP pertenece un determinado dominio, es decir, un sitio web. Sin
+            embargo, de acuerdo con la infraestructura y necesidad de los sitios web, existen altas probabilidades de que la dirección de IP cambie cada vez que realizamos la consulta.
+        </h1>
+       
+        <br>
+        <li>netstat.</li>
+        <h1 class="contenido">
+            Se la considera como una herramienta básica de monitorización de red, ya sea para realizar diagnósticos o análisis. Aunque si eres un usuario particular, esto te puede servir más que nada para tener un panorama general acerca de las conexiones que estás teniendo actualmente, el protocolo que estás utilizando, ladirección local y remota, etc.
+        </h1>
+        
+        <br>
+        <li>tracert.</li>
+        <h1 class="contenido">
+            El objetivo de este comando es verificar los saltos que da el paquete de datos que se quiere enviar a determinado destino. Esos saltos corresponden al hecho de por cuáles routers pasa antes de llegar al servidor final. Es bastante eficaz pues te
+            permite determinar con precisión en qué momento (o en qué servidor) el paquete ya no logra viajar al destino. Así, podremos apoyarnos en tracert si es que
+            tenemos algún inconveniente con la conectividad como latencia alta.
+
+        </h1>
+        
+        <li>pathping.</li>
+        <h1 class="contenido">
+            Este nos ayuda a mantener un control sobre todos los puntos de la red, y no soloen los dispositivos de red, si no que en todo lo que ocurre de forma interna y externa con los paquetes de red. Como administradores podremos verificar quetodos los paquetes son confiables y que las rutas sean las adecuadas. Mantener una correcta funcionalidad y comportamiento de la red, puede ser muy
+            complicado, y además, depende de los demás procesos de la organización. Este comando, nos puede ayudar incluso si somos gamers, pues permite controlar la latencia que tienen las conexiones para ver una comunicación en concreto.
+
+
+        </h1>
+        
+        <br>
+        <li>netsh.</li>
+        <h1 class="contenido">
+            Si buscamos profundizar en el mundo de la gestión y configuración de redes en Windows, es probable que nos topemos con el comando netsh
+ 
+            (Network Shell). Este nos permite una interfaz entre el administrador y el sistema operativo, que
+            nos deja administrar y configurar las redes locales y remotas. Sus aplicaciones convariadas como, por ejemplo:
+            <br><br>
+            -	Gestión de firewall<br><br>
+            -	Gestión de redes LAN y WLAN<br><br>
+            -	Configuraciones IP<br><br>
+            -	Configuración de servidores <br><br>
+            <br>
+            Esta nos ayuda a mantener nuestras infraestructuras a salvo de ataques externos.Para ello, tenemos opciones de diagnóstico de problemas que ocurren en la red yposibilidad de repararlos. Una de las ventajas que nos da este comando, es que resulta bastante rápido, cómodo y nos da la posibilidad de automatizarlo en
+            muchas ocasiones. Todo esto se realiza mediante scripts, por lo cual podemos establecer configuraciones muy complejas con un simple clic. Pero requiere untrabajo de programación previo, el cual sí que es probable que requiera ciertosconocimientos para podes crearlo.
+
+        </h1>
+        
+        <br>
+
+        <li>getmac.</li>
+        <h1 class="contenido">
+            En unos segundos, podrás contar con las direcciones MAC de todas las interfaces de red asociadas a tu ordenador. Lo que significa que podrás sabertanto de las interfaces conectadas, como las desconectadas. Es bueno saber que todo dispositivo cuenta con una dirección MAC si es que cumple con sus estándares asociado. ¿A cuáles nos referimos? A cualquiera de los estándaresIEEE 802: para conectarse por cable Ethernet, por Wi-Fi, Bluetooth y más.
+            Además, también cuenta con diferentes funciones para determinar diferentes parámetros al ejecutar el comando.
+
+        </h1>
+        
+        <br>
+
+        <li>chkdsk.</li>
+        <h1 class="contenido">
+            El comando chkdsk, que significa Check Disk, es una herramienta muy importante en el entorno de Windows para verificar y corregir errores en el sistema de archivos. Al ejecutar chkdsk, el sistema escanea la unidad especificada en busca de problemas, incluyendo sectores defectuosos, enlaces cruzados, y otros errores potenciales.
+        </h1>
+       
+        <br>
+
+        <li>systeminfo.</li>
+        <h1 class="contenido">
+            El comando systeminfo proporciona una visión integral de la configuración delsistema en un equipo de Windows. Al ejecutar systeminfo en la línea de comandos, se despliega una gran cantidad de información detallada, incluyendo la versión del sistema operativo, la fecha de instalación, el fabricante del sistema, la cantidad de memoria instalada, la
+            configuración dered y mucho más.
+
+        </h1>
+        <div  class="imagenes">
+
+    </ol>
+    <div class="caja">
+        <!-- Ver mas Subtemas -->
+        <div class="boton-container">
+            <br><br>
+                <a href="/tema13.html" class="ver-mas">Regresar</a>
+            </div>
+    </div> 
+</body>
+</html>

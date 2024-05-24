@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Poetsen+One&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <title>Control de procesos</title>
+    <link rel="stylesheet" href="../subtemas.css">
+</head>
+<body>
+    <!-- Menú-->
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../tema1.html">Tema 1</a></li>
+            <li><a href="../tema2.html">Tema 2</a></li>
+            <li><a href="../tema3.html">Tema 3</a></li>
+            <li><a href="../tema4.html">Tema 4</a></li>
+            <li><a href="../tema5.html">Tema 5</a></li>
+            <li><a href="../tema6.html">Tema 6</a></li>
+            <li><a href="../tema7.html">Tema 7</a></li>
+            <li><a href="../tema8.html">Tema 8</a></li>
+            <li><a href="../tema9.html">Tema 9</a></li>
+            <li><a href="../tema10.html">Tema 10</a></li>
+            <li><a href="../tema11.html">Tema 11</a></li>
+            <li><a href="../tema12.html">Tema 12</a></li>
+            <li><a href="../tema13.html">Tema 13</a></li>
+            <li><a href="../tema14.html">Tema 14</a></li>
+            <li><a href="../tema15.html">Tema 15</a></li>
+            <li><a href="../Info-Grupo.html">Info Grupo</a></li>
+        </ul>
+    </nav>
+    <!--Contenido-->
+    <h1 id="subtema13-1">Control de procesos</h1>
+
+    <hr id="hr13-1">
+
+    <ol class="pasos">
+        <img src="./imagenes/tema 5.1.jpg.png" class="imagenes1-1">
+        <h3>Definicion</h3>
+        <ul>
+            <p>
+                Un proceso puede informalmente entenderse como un programa en ejecución. Formalmente un proceso es "Una unidad de actividad que se caracteriza por la ejecución de una secuencia de instrucciones, un estado actual, y un conjunto de recursos del sistema asociados.
+            </p>
+            <h4>Caracteristicas del Modelo de procesos</h4>
+            <li>Todo el software ejecutable, inclusive el Sistema Operativo, se organiza en varios procesos secuenciales o procesos.</li>
+            <li>Un proceso incluye al programa en ejecución y a los valores activos del contador, registros y variables del mismo.</li>
+            <li>Conceptualmente cada proceso tiene su propia CPU virtual.</li>
+            <li>Un proceso es una actividad de un cierto tipo, que tiene un programa, entrada, salida y estado.</li>
+            <li>Un solo procesador puede ser compartido entre varios procesos con cierto “algoritmo de planificación”, el cual determina cuándo detener el trabajo en un proceso y dar servicio a otro distinto.</li>
+            <li>En cuanto a las jerarquías de procesos es necesario señalar que los Sistemas Operativos deben disponer de una forma de crear y destruir procesos cuando se requiera durante la operación, teniendo además presente que los procesos pueden generar procesos hijos mediante llamadas al Sistema Operativo, pudiendo darse ejecución en paralelo.</li>
+        </ul>
+        <h3>Representacion de un modelo de procesos</h3>
+
+        <img src="./imagenes/tema 5.2.png" class="imagenes1-1">
+
+        <h3>Que es un sistema operativo multihilo</h3>
+            <li>Es aquel Sistema Operativo que posee varios hilos de ejecución.</li>
+            <li>Un hilo de Ejecución o subproceso es una característica que permite a una aplicación realizar varias tareas a la vez (concurrentemente).</li>
+            <li>Los distintos hilos de ejecución comparten una serie de recursos tales como el espacio de memoria, los archivos abiertos, situación de autenticación, etc.</li>
+            <li>Los procesos son creados y destruidos por el sistema operativo, así como también este se debe hacer cargo de la comunicación entre procesos, pero lo hace a petición de otros procesos</li>
+            <li>El mecanismo por el cual un proceso crea otro proceso se denomina bifurcación (fork). Los nuevos procesos son independientes y no comparten memoria (es decir, información) con el proceso que los ha creado.</li>
+            <li>En los sistemas operativos multihilo es posible crear tanto hilos como procesos. La diferencia es en que un proceso solamente puede crear hilos para sí mismo.</li>
+
+        <h4>No hay un acuerdo universal sobre una definición de proceso,pero sí algunas definiciones aceptadas:</h4>
+            <li>Un programa que se está ejecutando.</li>
+            <li>Una actividad asincrónica.</li>
+            <li>El emplazamiento del control de un procedimiento que está siendo ejecutado.</li>
+            <li>Aquello que se manifiesta por la existencia en el Sistema Operativo de un bloque de control de proceso.</li>
+            <li>Aquella entidad a la cual son asignados los procesadores.</li>
+            <li>La unidad despachable.</li>
+        <h3>Estados de un procesos</h3>
+        <ul>
+            <p>
+                El principal trabajo del procesador es ejecutar las instrucciones de máquina que se encuentran en memoria principal. Estas instrucciones se encuentran en forma de programas. Para que un programa pueda ser ejecutado, el sistema operativo crea un nuevo proceso, y el procesador ejecuta una tras otra las instrucciones de este.
+                <br>Cada proceso es una entidad independiente pero frecuentemente debe interactuar con otros procesos.
+                <br>
+            </p>
+                <h3>Los procesos pueden bloquearse en su ejecución porque:</h3>
+            <p>
+            <li>El Sistema Operativo asignó la CPU a otro proceso.</li>
+            <li>Desde el punto de vista lógico no puede continuar porque espera datos que aún no están disponibles.</li>
+            <br>
+            <h3>Los estados que puede tener un proceso son:</h3>
+            <li>En ejecución: utiliza la CPU en el instante dado.</li>
+            <li>Listo: ejecutable, se detiene en forma temporal para que se ejecute otro proceso.</li>
+            <li>Bloqueado: no se puede ejecutar debido a la ocurrencia de algúnevento externo.</li>
+            </p>
+        </ul>
+    </ol>
+    <div class="caja">
+        <div class="boton-container">
+            <br><br>
+                <a href="/tema5.html" class="ver-mas">Regresar</a>
+            </div>
+    </div> 
+
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Poetsen+One&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <title>Virtualizacion </title>
+    <link rel="stylesheet" href="../subtemas.css">
+</head>
+<body>
+    <!-- Menú-->
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../tema1.html">Tema 1</a></li>
+            <li><a href="../tema2.html">Tema 2</a></li>
+            <li><a href="../tema3.html">Tema 3</a></li>
+            <li><a href="../tema4.html">Tema 4</a></li>
+            <li><a href="../tema5.html">Tema 5</a></li>
+            <li><a href="../tema6.html">Tema 6</a></li>
+            <li><a href="../tema7.html">Tema 7</a></li>
+            <li><a href="../tema8.html">Tema 8</a></li>
+            <li><a href="../tema9.html">Tema 9</a></li>
+            <li><a href="../tema10.html">Tema 10</a></li>
+            <li><a href="../tema11.html">Tema 11</a></li>
+            <li><a href="../tema12.html">Tema 12</a></li>
+            <li><a href="../tema13.html">Tema 13</a></li>
+            <li><a href="../tema14.html">Tema 14</a></li>
+            <li><a href="../tema15.html">Tema 15</a></li>
+            <li><a href="../Info-Grupo.html">Info Grupo</a></li>
+        </ul>
+    </nav>
+    <!--Contenido-->
+    <h1 id="subtema13-1"> Tipos de Virtualizacion</h1>
+
+    <hr id="hr13-1">
+
+    <ol class="pasos">
+        <ul>
+            <li><b>Virtualización de plataforma</b><br>
+                También llamado virtualización de servidor3 o de hardware4, en la que se emplean máquinas virtuales, programas huésped ejecutados sobre software especial, llamado hipervisor o VMM (Virtual Machine Monitor). Este último crea una capa de abstracción sobre el hardware de la máquina física (host) y se la ofrece al sistema operativo de la máquina virtual.5
+            </li>
+            <li><b>Virtualización de recursos de hardware, que, según el tipo de recurso, se distinguen entre:</b><br>
+                <br>•	Virtualización de almacenamiento: sistemas RAID, LVM, SAN y NAS.
+                <br><br>•	Virtualización de memoria: sistemas de memoria virtual.
+                <br><br>•	Virtualización de recursos de computación: los clústeres de computación.
+                <br><br>•	Virtualización de interfaces de red: por ejemplo, la agregación de enlaces simula un dispositivo de red único con gran ancho de banda utilizando múltiples interfaces de red independientes.6
+                <br><br>•	Virtualización de red: ejecutada por servicios de VPN, VLAN, Virtual IP y SDN.
+
+
+
+            </li>
+            <li><b>Virtualización de entornos software de ejecución: dependiendo del entorno de ejecución:</b><br>
+                <br>•	Virtualización con respecto al sistema operativo o contenerización: el kernel del sistema operativo subyacente permite ejecutar de forma paralela instancias de espacio de usuario, aisladas unas de otras.4 Todas las instancias comparten el kernel del sistema operativo subyacente. En cada instancia, llamada contenedor, el usuario puede instalar una o más aplicaciones. Al programa que ofrece alojamiento a contenedores se le llama motor de contenedores
+               <br><br> •	Virtualización de escritorio: implementan un escritorio como servicio basándose en una estructura cliente-servidor. Permite una administración centralizada y en entornos de trabajo estandarizados, es posible reducir de forma significativa los costes de gestión y mantenimiento.4 Dependiendo de donde se aplique la potencia de procesamiento para crear un escritorio virtual, se puede diferenciar entre distintos enfoques:4
+                <br><br>•	Virtualización basada en el host: los escritorios virtuales se ejecutan directamente en el servidor y los clientes tiene acceso a los escritorios virtuales a través de la red (ej. VNC, RDP). Usar máquinas virtuales para proporcionar y gestionar escritorios virtuales es llamado Infraestructura de Escritorios Virtuales o VDI (del inglés Virtual Desktop Infrastructure).7 La VDI aloja entornos de escritorio en un servidor centralizado y los distribuye a los usuarios finales según las necesidades.7
+                <br><br>•	Virtualización basada en el cliente: el dispositivo cliente es el que proporciona los recursos necesarios para gestionar el entorno de escritorio y cada escritorio virtual se sincroniza con el servidor. Ejemplos de este tipo virtualización es lo que hace Microsoft Enterprise Desktop Virtualization (MED-V), VMware ACE y SolidIce.
+                <br><br>•	Virtualización de aplicaciones: consiste en usar aplicaciones que aparentemente se ejecutan en local.8 Se pueden implementar por ejemplo:94
+                <br><br>•	Virtualización con aplicaciones remotas: las aplicaciones se ejecutan en un servidor remoto y el cliente se conecta a ellas a través de protocolos de visualización como VNC o RDP.
+                <br><br>•	Streaming de aplicaciones: las aplicaciones se ejecutan en local, pero ciertos componentes se descargan de forma que es posible funcionar sin tener conexión a la red. De esta forma, solo las partes esenciales del código de una aplicación deben instalarse en la computadora. Mientras el usuario final realiza acciones en la aplicación, el código y los archivos necesarios se entregan a través de la red cuando y como se requieren. De este modo, se permite ejecutar los programas en entornos aislados y distribuirlos en diferentes sistemas sin que sea necesario realizar cambios en el sistema local. Esto permite proteger el sistema operativo subyacente de código malicioso. Ejemplo de sistemas para proporcionar este tipo de servicios: VMware ThinApp, Microsoft Application Virtualization y XenApp (Citrix).
+
+
+
+            </li>
+            <li><b>Virtualización de datos</b><br>
+                Consiste en integrar datos de fuentes dispersas, en distintas localizaciones y formatos, sin replicar los datos, para construir una capa de datos virtual que facilita la provisión de servicios de datos unificados para dar soporte a múltiples aplicaciones y usuarios. Para ello proporciona una capa de abstracción y una capa de servicios de datos.
+           
+            
+            </li>
+        
+        </ul>
+    </ol>
+    <div class="caja">
+        <div class="boton-container">
+            <br><br>
+                <a href="/tema6.html" class="ver-mas">Regresar</a>
+            </div>
+    </div> 
+
+
+</body>
+</html>
